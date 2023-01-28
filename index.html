@@ -83,6 +83,38 @@ Let us go to the next part of the registration form. This section will ask for t
 user is opening, and will confirm the user has read the terms and conditions.
 Start by adding three label elements to the second fieldset.
 
+Step 25Passed
+Users will be allowed to choose either a Personal Account or Business Account.
+To do this, within each of the first two label elements, add one input element with type="radio".
+
+Step 26
+For the terms and conditions, add an input with a type of checkbox to the third label element. Make this 
+input element required because users should not sign up without reading the terms and conditions.
+
+Step 27
+Within each corresponding label element, and immediately after the input element, add a space and add the 
+following text:
+Personal Account
+Business Account
+I accept the terms and conditions
+
+Step 28
+You only want one radio input to be selectable at a time. However, the form does not know the radio inputs 
+are related.
+To relate the radio inputs, give them the same name attribute with a value of account-type. Now, it is not 
+possible to select both radio inputs at the same time.
+
+Step 29
+Follow accessibility best practices by linking the input elements and the label elements in the second 
+fieldset.
+Use personal-account, business-account, and terms-and-conditions as values for the respective id 
+attributes.
+
+Step 30
+To finish this fieldset off, link the text terms and conditions in the third label to the following 
+location:
+https://www.freecodecamp.org/news/terms-of-service/
+
 -->
 
 <!DOCTYPE html>
@@ -111,11 +143,15 @@ Start by adding three label elements to the second fieldset.
                 </label>
             </fieldset>
             <fieldset>
-                <label><input type="radio">
+                <label for="personal-account"><input type="radio" name="account-type" id="personal-account"/> 
+                    Personal Account
                 </label>
-                <label><input type="radio">
+                <label for="business-account"><input type="radio" name="account-type" id="business-account"/> 
+                    Business Account
                 </label>
-                <label></label>
+                <label for="terms-and-conditions"><input id="terms-and-conditions" type="checkbox" required /> 
+                    I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+                </label>
             </fieldset>
             <fieldset></fieldset>
             <input type="submit" value="Submit">
