@@ -165,6 +165,10 @@ Step 40
 To give Campers an idea of what to put in their bio, the placeholder attribute is used. The placeholder accepts a text value, 
 which is displayed until the user starts typing. Give the textarea a placeholder of I like coding on the beach....
 
+Step 49
+For the second fieldset, you want the input and label text to appear on the same line.
+Start, by giving the input elements in the second fieldset a class of inline.
+
 -->
 
 <!DOCTYPE html>
@@ -186,9 +190,9 @@ which is displayed until the user starts typing. Give the textarea a placeholder
                 <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
             </fieldset>
             <fieldset>
-                <label for="personal-account"><input id="personal-account" type="radio" name="account-type" /> Personal Account</label>
-                <label for="business-account"><input id="business-account" type="radio" name="account-type" /> Business Account</label>
-                <label for="terms-and-conditions"><input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></label>
+                <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" /> Personal Account</label>
+                <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Business Account</label>
+                <label for="terms-and-conditions"><input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/" target="_blank">terms and conditions</a></label>
             </fieldset>        
             <fieldset>
                 <label for="profile-picture" name="file">Upload a profile picture: <input id="profile-picture" type="file" name="file"/></label>
