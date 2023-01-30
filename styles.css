@@ -15,6 +15,24 @@ As label elements are inline by default, they are all displayed side by side on 
 To make them appear on separate lines, add display: block to the label element, and add a margin of 0.5rem 0, to separate them 
 from each other.
 
+Step 42
+The HTML for the registration form is finished. Now, you can spruce it up a bit. Start by changing the font to Tahoma, and the 
+font size to 16px in the body.
+
+Step 43
+Center the h1 and p elements by giving them a margin of 1em auto. Then, align their text in the center as well.
+
+Step 44
+Center the form element, by giving it a margin of 0 auto. Then, fix its size to a maximum width of 500px, and a minimum width 
+of 300px. In between that range, allow it to have a width of 60vw.
+
+Step 45
+During development, it is useful to see the fieldset default borders. However, they make the content appear too separated.
+Remove the border, and add 2rem of padding only to the top and bottom of each fieldset. Be sure to remove the padding from the 
+left and right.
+
+
+
 
 */
 
@@ -24,9 +42,28 @@ body {
     margin: 0;
     background-color: #1b1b32;
     color: #f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;
   }
 
 label {
     display: block;
     margin: 0.5rem 0;
+}
+
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+form {
+  margin: 0 auto;
+  max-width: 500px;
+  min-width: 300px;
+  width: 60vw;
+}
+
+fieldset {
+  border: 0;
+  padding: 2rem 0;
 }
